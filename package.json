@@ -7,7 +7,7 @@
         "collapse",
         "slide"
     ],
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Custom Vue transition to collapse elements horizontally or vertically. Works with both fixed and 'auto' width or height.",
     "main": "dist/collapse-transition.js",
     "scripts": {

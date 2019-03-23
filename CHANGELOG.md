@@ -2,6 +2,11 @@
 
 All Notable changes to this package will be documented in this file.
 
+## 0.2.0 (2019-03-23)
+
+- Enable the use of a `<script>` tag to include this package.
+- Update the README
+
 ## 0.1.0 (2019-03-21)
 
 - First version published.
