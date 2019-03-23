@@ -203,7 +203,7 @@
             convertToCssProperty(style) {
                 // Example: convert 'paddingTop' to 'padding-top'
                 // Thanks: https://gist.github.com/tan-yuki/3450323
-                const upperChars = style.match(/([A-Z])/g);
+                const upperChars = style.match(/([A-Z])/g)
 
                 if ( ! upperChars) {
                     return style
