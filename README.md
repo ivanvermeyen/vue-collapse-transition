@@ -73,6 +73,8 @@ Default: `height`
 </collapse-transition>
 ```
 
+> If you collapse the width of a container, the content of its children might wrap on new lines. To remedy this, you can either add a fixed height to the children or use the CSS rule `white-space: nowrap`.
+
 #### ☑️ Class Names
 
 Vue will also set the usual [transition classes](<https://vuejs.org/v2/guide/transitions.html#Transition-Classes>). By default, the transition `name` is `collapse`, so the classes would be like `collapse-enter` and `collapse-leave-to`. You can choose another name if you wish.
