@@ -5,7 +5,7 @@
 [![Downloads](https://img.shields.io/npm/dt/@ivanv/vue-collapse-transition.svg)](https://npmjs.com/package/@ivanv/vue-collapse-transition)
 [![License](https://img.shields.io/npm/l/@ivanv/vue-collapse-transition.svg)](https://choosealicense.com/licenses/mit/)
 
-##### This custom [VueJS]([https://vuejs.org](https://vuejs.org/)) transition component wraps the built-in `transition`. It collapses elements horizontally or vertically. *Works with both fixed and 'auto' width or height!*
+#### This custom [VueJS]([https://vuejs.org](https://vuejs.org/)) transition component wraps the built-in `transition`. It collapses elements horizontally or vertically. *Works with both fixed and 'auto' width or height!*
 
 ## 👁 Demo
 
