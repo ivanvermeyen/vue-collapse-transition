@@ -39,6 +39,12 @@
             },
         },
 
+        watch: {
+            dimension() {
+                this.cachedStyles = null
+            }
+        },
+
         data() {
             return {
                 cachedStyles: null,
