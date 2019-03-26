@@ -89,6 +89,11 @@
             },
 
             leave(el, done) {
+                // For some reason, @leave triggered when starting
+                // from open state on page load. So for safety,
+                // check if the dimensions have been cached.
+                this.detectAndCacheDimensions(el)
+
                 // The order of applying styles is less important
                 // than in the enter phase, as long as we repaint
                 // before setting the closed dimensions.
