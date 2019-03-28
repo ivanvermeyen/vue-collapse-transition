@@ -2,6 +2,11 @@
 
 All Notable changes to this package will be documented in this file.
 
+## 0.2.1 (2019-03-28)
+
+- Reset cached styles when the `dimension` property changes
+- Also check for cached styles on `@leave`
+
 ## 0.2.0 (2019-03-23)
 
 - Enable the use of a `<script>` tag to include this package.
