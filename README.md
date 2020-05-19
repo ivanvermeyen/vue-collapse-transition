@@ -50,7 +50,7 @@ When you toggle the `v-show` boolean value, the transition will automatically tr
   export default {
     data() {
       return {
-        isOpen = false, // closed by default
+        isOpen: false, // closed by default
       }
     }
   }
