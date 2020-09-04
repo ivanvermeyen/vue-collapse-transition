@@ -47,7 +47,12 @@ When you toggle the `v-show` boolean value, the transition will automatically tr
 </template>
 
 <script>
+  import { CollapseTransition } from "@ivanv/vue-collapse-transition"
+  
   export default {
+    components: {
+      CollapseTransition,
+    },
     data() {
       return {
         isOpen: false, // closed by default
