@@ -41,7 +41,7 @@
 
         watch: {
             dimension() {
-                this.cachedStyles = null
+                this.clearCachedDimensions()
             }
         },
 
@@ -92,6 +92,7 @@
                 this.unsetOverflow(el)
                 this.unsetTransition(el)
                 this.unsetDimensions(el)
+                this.clearCachedDimensions()
             },
 
             leave(el, done) {
@@ -123,6 +124,7 @@
                 this.unsetOverflow(el)
                 this.unsetTransition(el)
                 this.unsetDimensions(el)
+                this.clearCachedDimensions()
             },
 
             detectAndCacheDimensions(el) {
@@ -144,6 +146,10 @@
                 // Restore any original styling
                 el.style.visibility = visibility
                 el.style.display = display
+            },
+
+            clearCachedDimensions() {
+                this.cachedStyles = null
             },
 
             detectRelevantDimensions(el) {
