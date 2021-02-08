@@ -27,8 +27,8 @@
     "author": "Ivan Vermeyen",
     "license": "MIT",
     "devDependencies": {
-        "cross-env": "^5.2.0",
-        "laravel-mix": "^4.0.15",
-        "vue-template-compiler": "^2.6.10"
+        "cross-env": "^5.2.1",
+        "laravel-mix": "^4.1.4",
+        "vue-template-compiler": "^2.6.12"
     }
 }
