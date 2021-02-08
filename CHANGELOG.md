@@ -2,6 +2,11 @@
 
 All Notable changes to this package will be documented in this file.
 
+## 1.0.0 (2020-02-08)
+
+- Clear cached dimensions after transitions
+- Emit transition events
+
 ## 0.2.1 (2019-03-28)
 
 - Reset cached styles when the `dimension` property changes
