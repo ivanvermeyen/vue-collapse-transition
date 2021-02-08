@@ -1,9 +1,17 @@
 <template>
     <transition :name="name"
+                @before-appear="beforeAppear"
+                @appear="appear"
+                @after-appear="afterAppear"
+                @appear-cancelled="appearCancelled"
+                @before-enter="beforeEnter"
                 @enter="enter"
                 @after-enter="afterEnter"
+                @enter-cancelled="enterCancelled"
+                @before-leave="beforeLeave"
                 @leave="leave"
                 @after-leave="afterLeave"
+                @leave-cancelled="leaveCancelled"
     >
         <slot></slot>
     </transition>
@@ -64,6 +72,31 @@
         },
 
         methods: {
+            beforeAppear(el) {
+                // Emit the event to the parent
+                this.$emit('before-appear', el)
+            },
+
+            appear(el) {
+                // Emit the event to the parent
+                this.$emit('appear', el)
+            },
+
+            afterAppear(el) {
+                // Emit the event to the parent
+                this.$emit('after-appear', el)
+            },
+
+            appearCancelled(el) {
+                // Emit the event to the parent
+                this.$emit('appear-cancelled', el)
+            },
+
+            beforeEnter(el) {
+                // Emit the event to the parent
+                this.$emit('before-enter', el)
+            },
+
             enter(el, done) {
                 // Because width and height may be 'auto',
                 // first detect and cache the dimensions
@@ -82,6 +115,9 @@
                 this.setTransition(el)
                 this.setOpenedDimensions(el)
 
+                // Emit the event to the parent
+                this.$emit('enter', el, done)
+
                 // Call done() when the transition ends
                 // to trigger the @after-enter event.
                 setTimeout(done, this.duration)
@@ -93,6 +129,19 @@
                 this.unsetTransition(el)
                 this.unsetDimensions(el)
                 this.clearCachedDimensions()
+
+                // Emit the event to the parent
+                this.$emit('after-enter', el)
+            },
+
+            enterCancelled(el) {
+                // Emit the event to the parent
+                this.$emit('enter-cancelled', el)
+            },
+
+            beforeLeave(el) {
+                // Emit the event to the parent
+                this.$emit('before-leave', el)
             },
 
             leave(el, done) {
@@ -112,6 +161,9 @@
                 this.setTransition(el)
                 this.setClosedDimensions(el)
 
+                // Emit the event to the parent
+                this.$emit('leave', el, done)
+
                 // Call done() when the transition ends
                 // to trigger the @after-leave event.
                 // This will also cause v-show
@@ -125,6 +177,14 @@
                 this.unsetTransition(el)
                 this.unsetDimensions(el)
                 this.clearCachedDimensions()
+
+                // Emit the event to the parent
+                this.$emit('after-leave', el)
+            },
+
+            leaveCancelled(el) {
+                // Emit the event to the parent
+                this.$emit('leave-cancelled', el)
             },
 
             detectAndCacheDimensions(el) {
